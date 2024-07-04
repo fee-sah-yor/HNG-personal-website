@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --base-color: #080808;
+  --bg-color: #0d1117;
+  --cyan: rgb(39, 245, 245);
+  --shadow: #11141a;
+}
+body {
+  background-color:black;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.container {
+  position: relative;
+  background-color: black;
+  color: white;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+header {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2rem 1rem 2rem 1rem;
+  border-bottom: 1px solid rgb(117, 115, 115);
+  background-color: var(--base-color);
+  overflow: auto;
+  z-index: 999;
+}
+header h1 {
+  font-size: 30px;
+}
+header h1 span {
+  color: rgb(39, 245, 245);
+  text-shadow: 0 0 25px rgb(39, 245, 245);
+}
+header nav ul,
+footer ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+nav ul li a:hover {
+  text-decoration: underline;
+  color: rgb(39, 245, 245);
+  transform: scale(1.3), translateY(5px);
+}
+section {
+  background-color: var(--bg-color);
+  margin-top: 6.8rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* align-items: center; */
+  width: 80%;
+  gap: 2rem;
+  border: 1px solid rgb(117, 115, 115);
+  margin-left: 2rem;
+  margin-right: 2rem;
+  border-radius: 0.6rem;
+  padding: 1rem;
+  box-shadow: 5px 5px 9px var(--shadow);
+}
+.profile {
+  max-width: 50%;
+  border: 1px solid rgb(117, 115, 115);
+  border-radius: 0.6rem;
+  padding: 1rem;
+}
+.profile .photo {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: center;
+}
+.profile .photo img {
+  border-radius: 50%;
+  border: 2px solid rgb(39, 245, 245);
+}
+.profile .photo img:hover {
+  box-shadow: 0 0 25px rgb(39, 245, 245);
+}
+.profile .details {
+  margin-top: 2rem;
+  font-weight: 500;
+}
+.profile .details .text {
+  gap: 0.5rem;
+  padding: 0 0.5rem 0 0.5rem;
+  margin-bottom: 1rem;
+}
+.profile .details .text p {
+  background-color: black;
+  padding: 0.7rem;
+  border-radius: 5px;
+  border: 1px solid rgb(117, 115, 115);
+}
+.profile .details .text .label span {
+  font-size: small;
+  font-weight: 400;
+}
+.goals {
+  border: 1px solid rgb(117, 115, 115);
+  border-radius: 0.6rem;
+  max-width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: auto;
+}
+.goals h2 {
+  padding: 1rem;
+  justify-content: flex-start;
+}
+.goals p {
+  padding: 1rem;
+  font-size: 20px;
+  font-weight: 700;
+}
+.goals p span {
+  color: rgb(39, 245, 245);
+}
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem;
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  body {
+    height: auto;
+  }
+  section {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    max-height: auto;
+  }
+  .profile {
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  .goals {
+    max-width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1rem;
+  }
+  .profile {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  footer ul {
+    margin-left:1rem
+  }
+}
